@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary-green': 'var(--primary-green)',
+        'tech-blue': 'var(--tech-blue)',
+        'accent-orange': 'var(--accent-orange)',
+        'background': 'var(--background)',
+        'text': 'var(--text)',
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        opensans: ['var(--font-opensans)'],
       },
     },
   },
