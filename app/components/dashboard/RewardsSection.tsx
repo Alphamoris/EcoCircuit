@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import { SparklesIcon, GiftIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const rewards = [
   {
@@ -45,9 +46,11 @@ export default function RewardsSection() {
             key={reward.id}
             className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
           >
-            <img
+            <Image
               src={reward.image}
               alt={reward.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-lg object-cover"
             />
             <div className="flex-grow">

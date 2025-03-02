@@ -2,6 +2,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { XMarkIcon, SparklesIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -82,15 +83,17 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.name}
+                      layout='responsive'
+                      width={600}
+                      height={400}
                       className="w-full rounded-lg"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = '/placeholder-product.png';
-                      }}
-                    />
+                      }}/>
                   </div>
 
                   <div>

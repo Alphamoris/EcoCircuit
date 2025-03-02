@@ -3,6 +3,7 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import "./globals.css";
+import ClientLayout from "./components/layout/ClientLayout";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     description: 'Sustainable e-waste management through AI-powered recycling',
     images: ['/logo.png'],
   },
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 export default function RootLayout({
@@ -47,17 +49,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/logo.png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-      </head>
-      <body className={`${montserrat.variable} ${openSans.variable} flex flex-col min-h-screen`}>
-        <Navbar />
-        <div className="flex-grow">
-          {children}
-        </div>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <body className={`${montserrat.variable} ${openSans.variable} flex flex-col min-h-screen font-opensans text-text bg-background`}>
+        <ClientLayout>
+          <Navbar />
+          <div className="flex-grow pt-16">
+            {children}
+          </div>
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   );

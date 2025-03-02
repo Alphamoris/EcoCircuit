@@ -5,9 +5,10 @@
 :root {
   /* Brand Colors */
   --primary-green: #1E5631;
+  --primary-green-rgb: 30, 86, 49;
   --tech-blue: #0077CC;
   --accent-orange: #DA7635;
-  --background: #F2E8DC;
+  --background: #F2F9F3;
   --text: #1A1A1A; /* Darker text color for better contrast */
 
   /* Dark mode overrides if needed */
@@ -49,4 +50,370 @@ body {
 
 .bg-overlay {
   @apply bg-black bg-opacity-50;
+}
+
+/* Ensure text contrast */
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-primary-green {
+  color: var(--primary-green);
+}
+
+.text-tech-blue {
+  color: var(--tech-blue);
+}
+
+.text-accent-orange {
+  color: var(--accent-orange);
+}
+
+/* Background colors */
+.bg-primary-green {
+  background-color: var(--primary-green);
+}
+
+.bg-tech-blue {
+  background-color: var(--tech-blue);
+}
+
+.bg-accent-orange {
+  background-color: var(--accent-orange);
+}
+
+/* Ensure proper contrast for text on colored backgrounds */
+.bg-primary-green .text-white,
+.bg-tech-blue .text-white,
+.bg-accent-orange .text-white {
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve text readability */
+p {
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus styles for accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+}
+
+/* Ensure proper contrast for links */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Ensure proper contrast for buttons */
+button, .button {
+  transition: all 0.2s ease;
+}
+
+/* Improve mobile tap targets */
+@media (max-width: 640px) {
+  button, .button, a {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Enhanced text contrast and visibility */
+.prose h2 {
+  color: var(--primary-green);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  color: #374151; /* dark gray for better contrast */
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.prose ul, .prose ol {
+  color: #374151;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Policy pages specific styling */
+.policy-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.policy-container h2 {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: 0.5rem;
+}
+
+/* Guide page styling */
+.guide-step {
+  border: 1px solid rgba(var(--primary-green-rgb), 0.2);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.guide-step:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dos-donts-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dos-donts-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.dos-card, .donts-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.dos-card {
+  background-color: rgba(var(--primary-green-rgb), 0.1);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.2);
+}
+
+.donts-card {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.dos-card h3, .donts-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dos-card h3 {
+  color: var(--primary-green);
+}
+
+.donts-card h3 {
+  color: rgb(220, 38, 38);
+}
+
+.dos-card ul, .donts-card ul {
+  padding-left: 1.5rem;
+}
+
+.dos-card li, .donts-card li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+/* Navbar adjustments */
+
+header.scrolled {
+  background-color: var(--primary-green) !important;
+}
+
+/* Remove box appearing on click */
+button:focus, a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Navbar specific styling */
+header {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar-link {
+  @apply px-2 py-1.5 text-sm;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .navbar-link {
+    @apply px-3 py-2 text-base;
+  }
+}
+
+/* Fix mobile menu alignment and prevent overflow */
+@media (max-width: 768px) {
+  header > div {
+    max-width: 100%;
+  }
+  
+  .navbar-link {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  header {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Contributors section styling */
+.contributors-section {
+  background: linear-gradient(to bottom, white, rgba(var(--primary-green-rgb), 0.1));
+  padding: 4rem 0;
+}
+
+.contributor-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.contributor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-green);
+}
+
+.contributor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contributor-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-green);
+  padding: 3px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.contributor-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.contributor-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(var(--primary-green-rgb), 0.1);
+  color: var(--primary-green);
+  transition: all 0.2s ease;
+}
+
+.contributor-social a:hover {
+  background-color: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .contributor-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .contributor-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Ensure consistent spacing in mobile view */
+@media (max-width: 640px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .contributor-image {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+  
+  /* Fix mobile navbar overflow */
+  header .max-w-7xl {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Ensure text doesn't overflow in navbar */
+  header span, header a {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Add backdrop filter with webkit prefix for Safari */
+header {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }

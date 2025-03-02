@@ -44,7 +44,7 @@ export default function WasteCalculator() {
             Calculate Your Green Points
           </h2>
           <p className="text-gray-700 text-lg">
-            Estimate how many Green Points you'll earn from your e-waste recycling
+            Estimate how many Green Points you&apos;ll earn from your e-waste recycling
           </p>
         </div>
 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { SparklesIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import ProductModal from './ProductModal';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -349,9 +350,12 @@ export default function ProductGrid({
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
             <div className="relative aspect-w-16 aspect-h-9 bg-gray-100">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                layout='responsive'
+                width={300}
+                height={169}
                 className="object-cover w-full h-full"
               />
               <div className="absolute top-2 right-2">

@@ -83,6 +83,7 @@ export default function ScheduleCollection() {
                 Full Name
               </label>
               <input
+              aria-label='name'
                 type="text"
                 name="name"
                 value={formData.name}
@@ -97,6 +98,7 @@ export default function ScheduleCollection() {
                 Email
               </label>
               <input
+              aria-label='email'
                 type="email"
                 name="email"
                 value={formData.email}
@@ -113,6 +115,7 @@ export default function ScheduleCollection() {
               <div className="relative">
                 <DevicePhoneMobileIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input
+                aria-label='phone'
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -130,6 +133,7 @@ export default function ScheduleCollection() {
               <div className="relative">
                 <MapPinIcon className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <textarea
+                aria-label='address'
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
@@ -150,6 +154,7 @@ export default function ScheduleCollection() {
               <div className="relative">
                 <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input
+                aria-label='date'
                   type="date"
                   name="date"
                   value={formData.date}
@@ -166,6 +171,7 @@ export default function ScheduleCollection() {
                 Preferred Time
               </label>
               <select
+              aria-label='time'
                 name="time"
                 value={formData.time}
                 onChange={handleChange}

@@ -16,7 +16,7 @@ export default function CalculatorPage() {
             Green Points Calculator
           </h1>
           <p className="text-lg text-text max-w-2xl mx-auto">
-            Calculate the Green Points you'll earn by recycling your e-waste. 
+            Calculate the Green Points you&apos;ll earn by recycling your e-waste. 
             The more you recycle, the more points you earn towards rewards!
           </p>
         </motion.div>
