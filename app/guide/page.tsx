@@ -121,7 +121,7 @@ export default function GuidePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2 className="text-3xl font-bold text-primary-green mb-8 text-center">
-            Do's and Don'ts
+            Do&apos;s and Don&apos;ts
           </h2>
           
           <div className="dos-donts-container">
@@ -133,7 +133,7 @@ export default function GuidePage() {
             >
               <h3>
                 <CheckCircleIcon className="h-6 w-6 text-primary-green" />
-                Do's
+                Do&apos;s
               </h3>
               <ul className="list-disc pl-5 text-gray-700">
                 {dos.map((item, index) => (
@@ -150,7 +150,7 @@ export default function GuidePage() {
             >
               <h3>
                 <XCircleIcon className="h-6 w-6 text-red-600" />
-                Don'ts
+                Don&apos;ts
               </h3>
               <ul className="list-disc pl-5 text-gray-700">
                 {donts.map((item, index) => (

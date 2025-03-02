@@ -86,14 +86,14 @@ export default function PrivacyPolicyPage() {
               <li>The right to data portability</li>
             </ul>
             <p className="mt-4">
-              To exercise these rights, please contact us using the information provided in the "Contact Us" section.
+              To exercise these rights, please contact us using the information provided in the &quot;Contact Us&quot; section.
             </p>
           </div>
 
           <div className="policy-container">
             <h2>6. Changes to This Policy</h2>
             <p>
-              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
             </p>
             <p>
               We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.

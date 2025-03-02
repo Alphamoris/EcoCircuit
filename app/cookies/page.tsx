@@ -79,7 +79,7 @@ export default function CookiePolicyPage() {
 
             <h2 className="text-2xl font-bold text-primary-green mb-4 mt-8">4. Managing Cookies</h2>
             <p>
-              Most web browsers allow you to control cookies through their settings. You can usually find these settings in the "Options" or "Preferences" menu of your browser. You can also use the "Help" option in your browser for more details.
+              Most web browsers allow you to control cookies through their settings. You can usually find these settings in the &quot;Options&quot; or &quot;Preferences&quot; menu of your browser. You can also use the &quot;Help&quot; option in your browser for more details.
             </p>
             <p>
               Please note that if you choose to block or delete cookies, some features of our website may not function correctly.
@@ -92,7 +92,7 @@ export default function CookiePolicyPage() {
 
             <h2 className="text-2xl font-bold text-primary-green mb-4 mt-8">6. Changes to This Cookie Policy</h2>
             <p>
-              We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last updated" date.
+              We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the &quot;Last updated&quot; date.
             </p>
 
             <h2 className="text-2xl font-bold text-primary-green mb-4 mt-8">7. Contact Us</h2>

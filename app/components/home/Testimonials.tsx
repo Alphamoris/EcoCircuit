@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useAnimation, useScroll, useTransform } from '
 import { useInView } from 'react-intersection-observer';
 import { 
     ChatBubbleBottomCenterTextIcon, 
-    StarIcon, 
     ArrowLeftIcon, 
     ArrowRightIcon,
     CheckBadgeIcon,
@@ -381,7 +380,7 @@ export default function Testimonials() {
                                             animate={{ opacity: 1 }}
                                             transition={{ duration: 0.5, delay: 0.2 }}
                                         >
-                                            "{testimonials[currentIndex].quote}"
+                                            &quot;{testimonials[currentIndex].quote}&quot;
                                         </motion.span>
                                     </blockquote>
                                     <div className="flex items-center">
@@ -523,7 +522,7 @@ export default function Testimonials() {
                             </div>
                             
                             <blockquote className="text-gray-700 leading-relaxed italic mb-6 flex-grow">
-                                "{testimonial.quote}"
+                                &quot;{testimonial.quote}&quot;
                             </blockquote>
                             
                             <div className="flex items-center mt-auto">

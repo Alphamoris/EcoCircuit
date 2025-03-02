@@ -166,7 +166,7 @@ export default function AnimatedStats() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            We've helped thousands of users recycle their electronic devices responsibly
+            We&apos;ve helped thousands of users recycle their electronic devices responsibly
           </motion.p>
         </motion.div>
 

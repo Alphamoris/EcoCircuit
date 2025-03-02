@@ -134,7 +134,7 @@ export default function Contributors() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
         >
-          {contributors.map((contributor, index) => (
+          {contributors.map((contributor) => (
             <motion.div
               key={contributor.name}
               variants={itemVariants}
@@ -206,7 +206,7 @@ export default function Contributors() {
           className="mt-16 text-center"
         >
           <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-            Interested in contributing to our mission? We're always looking for passionate individuals to join our team.
+            Interested in contributing to our mission? We&apos;re always looking for passionate individuals to join our team.
           </p>
           <motion.button
             className="bg-primary-green text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl"

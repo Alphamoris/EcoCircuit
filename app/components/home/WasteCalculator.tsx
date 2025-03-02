@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ScaleIcon, SparklesIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 
@@ -15,11 +15,7 @@ export default function WasteCalculator() {
   const [category, setCategory] = useState(wasteCategories[0].id);
   const [points, setPoints] = useState(0);
 
-  useEffect(() => {
-    calculatePoints();
-  }, [weight, category]);
-
-  const calculatePoints = () => {
+  const calculatePoints = useCallback(() => {
     const selectedCategory = wasteCategories.find(c => c.id === category);
     const weightNum = parseFloat(weight);
     if (selectedCategory && !isNaN(weightNum) && weightNum > 0) {
@@ -27,7 +23,11 @@ export default function WasteCalculator() {
     } else {
       setPoints(0);
     }
-  };
+  }, [weight, category]);
+
+  useEffect(() => {
+    calculatePoints();
+  }, [calculatePoints]);
 
   const handleWeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
