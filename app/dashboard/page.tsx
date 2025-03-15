@@ -6,7 +6,7 @@ import RewardsSection from '../components/dashboard/RewardsSection';
 import UpcomingCollections from '../components/dashboard/UpcomingCollections';
 
 export default function DashboardPage() {
-  const username = 'Bhanu Prakash'; // Replace with actual username
+  const username = 'Dhanush Kumar S'; // Replace with actual username
 
   return (
     <main className="min-h-screen bg-background bg-gradient-to-b from-[#E7F4E8] via-[#F2F9F3] to-white">

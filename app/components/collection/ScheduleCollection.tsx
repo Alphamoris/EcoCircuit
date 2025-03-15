@@ -197,7 +197,7 @@ export default function ScheduleCollection() {
               value={formData.items}
               onChange={handleChange}
               required
-              placeholder="e.g., 2 laptops, 1 printer, 3 phones"
+              placeholder="e.g., 2 laptops, 1 printer, 3 phones (or) in Kg's"
               className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-gray-800 focus:outline-none focus:border-primary-green"
             />
           </div>

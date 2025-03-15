@@ -7,13 +7,13 @@ import Testimonials from './components/home/Testimonials';
 import EnvironmentalImpact from './components/home/EnvironmentalImpact';
 import Image from 'next/image';
 import Features from './components/home/Features';
-import Contributors from './components/home/Contributors';
+// import Contributors from './components/home/Contributors';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#E7F4E8] via-[#F2F9F3] to-white overflow-hidden">
+      <section className="relative min-h-screen z-0 flex items-center justify-center bg-gradient-to-b from-[#E7F4E8] via-[#F2F9F3] to-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Contributors Section */}
-      <Contributors />
+      {/* <Contributors /> */}
 
       {/* CTA Section - Green Gradient */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-[#F2F9F3] to-[#E7F4E8]">

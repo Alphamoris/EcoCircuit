@@ -81,6 +81,45 @@ const features = [
   }
 ];
 
+// Add this constant for predetermined circle positions
+const floatingCircles = [
+  {
+    width: 80,
+    height: 100,
+    left: 25,
+    top: 15,
+    animationOffset: 20
+  },
+  {
+    width: 120,
+    height: 90,
+    left: 65,
+    top: 35,
+    animationOffset: 15
+  },
+  {
+    width: 95,
+    height: 110,
+    left: 45,
+    top: 60,
+    animationOffset: 25
+  },
+  {
+    width: 85,
+    height: 85,
+    left: 15,
+    top: 75,
+    animationOffset: 18
+  },
+  {
+    width: 110,
+    height: 100,
+    left: 75,
+    top: 85,
+    animationOffset: 22
+  }
+];
+
 export default function Features() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -189,8 +228,8 @@ export default function Features() {
         }}
       />
       
-      {/* Floating circles */}
-      {[...Array(5)].map((_, i) => (
+      {/* Replace the random circles with predetermined ones */}
+      {floatingCircles.map((circle, i) => (
         <motion.div
           key={i}
           className="absolute rounded-full bg-primary-green/10 blur-xl -z-10"
@@ -199,18 +238,18 @@ export default function Features() {
           whileInView="visible"
           viewport={{ once: true }}
           style={{
-            width: `${Math.random() * 100 + 50}px`,
-            height: `${Math.random() * 100 + 50}px`,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            width: `${circle.width}px`,
+            height: `${circle.height}px`,
+            left: `${circle.left}%`,
+            top: `${circle.top}%`,
           }}
           animate={{
-            y: [0, Math.random() * 30 - 15, 0],
-            x: [0, Math.random() * 30 - 15, 0],
-            scale: [1, Math.random() * 0.4 + 0.8, 1],
+            y: [0, circle.animationOffset, 0],
+            x: [0, circle.animationOffset / 2, 0],
+            scale: [1, 0.9, 1],
           }}
           transition={{
-            duration: Math.random() * 5 + 10,
+            duration: 10 + i * 2,
             repeat: Infinity,
             repeatType: "reverse",
           }}

@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 overflow-visible ${
         scrolled ? 'bg-primary-green shadow-md py-2' : 'bg-primary-green py-3 sm:py-4'
       }`}
     >
@@ -118,7 +118,7 @@ export default function Navbar() {
               className="hidden sm:flex items-center text-sm bg-white text-primary-green px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/90 transition-colors font-medium shadow-sm"
             >
               <UserCircleIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1" />
-              <span>Bhanu</span>
+              <span>Alpha</span>
             </Link>
             
             <button
