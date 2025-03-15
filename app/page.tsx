@@ -7,7 +7,7 @@ import Testimonials from './components/home/Testimonials';
 import EnvironmentalImpact from './components/home/EnvironmentalImpact';
 import Image from 'next/image';
 import Features from './components/home/Features';
-// import Contributors from './components/home/Contributors';
+//import Contributors from './components/home/Contributors';
 
 export default function Home() {
   return (
