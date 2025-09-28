@@ -149,12 +149,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Team
-
-- **Bhanu Prakash** - Lead Developer
-- **Harshith** - UI/UX Designer
-- **Dharshan** - Backend Engineer
-
 ## 📞 Contact
 
 - Email: alphamoris45@gmail.com
